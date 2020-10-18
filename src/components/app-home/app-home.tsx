@@ -1,4 +1,5 @@
-import { Component, h } from '@stencil/core';
+import { Component, h, Prop } from '@stencil/core';
+import { RouterHistory } from '@stencil/router';
 
 @Component({
   tag: 'app-home',
@@ -6,12 +7,19 @@ import { Component, h } from '@stencil/core';
   shadow: true,
 })
 export class AppHome {
+  @Prop() history: RouterHistory;
+
   constructor() {
     this.onClick = this.onClick.bind(this);
+    this.goToWelcomePage = this.goToWelcomePage.bind(this);
   }
 
   onClick() {
     console.log('onClick');
+  }
+
+  goToWelcomePage() {
+    this.history.push('/welcome');
   }
 
   render() {
@@ -33,7 +41,7 @@ export class AppHome {
                 <img src="../../assets/images/cross-ui-logo-react-hover.svg" class="h-12" />
               </div>
             </div>
-            <div class="h-full flex items-end justify-center absolute bottom-0 py-12">
+            <div class="w-12 h-12 flex items-end justify-center absolute bottom-0 mb-12 cursor-pointer hover:opacity-50" onClick={this.goToWelcomePage}>
               <svg
                 class="animate-bounce w-6 h-6 text-gray-900"
                 fill="none"
@@ -50,7 +58,7 @@ export class AppHome {
         </section>
 
         <div class="flex p-4 min-h-screen pt-16">
-          <app-menu class="w-64 pt-16" />
+          <app-menu class="w-64 pt-10" />
 
           <div class="Content w-full p-4">
             <stencil-router>

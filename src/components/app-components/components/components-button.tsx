@@ -25,27 +25,58 @@ export class ComponentsButton {
         <div class="mb-8">
           <h3 class="text-2xl mb-2 bg-gray-100 px-2">Basic</h3>
           <div class="px-4 text-center">
-            <cross-button onClick={this.onClick} color="red">
-              my button
-            </cross-button>
-            <cross-button onClick={this.onClick} class="pl-4">
-              my button with long text
-            </cross-button>
+            <div class="my-2 text-center w-auto flex items-center flex-col">
+              <div class="flex w-full justify-center">
+                <div class="w-64 text-center">small</div>
+                <div class="w-64 text-center">medium</div>
+                <div class="w-64 text-center">large</div>
+              </div>
+              <div class="flex w-full justify-center mt-2">
+                <div class="w-64 text-center">
+                  <cross-button onClick={this.onClick} size="small">
+                    my button
+                  </cross-button>
+                </div>
+                <div class="w-64 text-center">
+                  <cross-button onClick={this.onClick}>my button</cross-button>
+                </div>
+                <div class="w-64 text-center">
+                  <cross-button onClick={this.onClick} size="large">
+                    my button
+                  </cross-button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="mb-8">
           <h3 class="text-2xl mb-2 bg-gray-100 px-2">Rounded</h3>
           <div class="px-4 text-center">
-            <cross-button onClick={this.onClick} pill>
-              my button
-            </cross-button>
-            <cross-button onClick={this.onClick} class="pl-4" pill>
-              my button with long text
-            </cross-button>
-            <cross-button onClick={this.onClick} class="pl-4" disabled>
-              my button with long text
-            </cross-button>
+            <div class="my-2 text-center w-auto flex items-center flex-col">
+              <div class="flex w-full justify-center">
+                <div class="w-64 text-center">small</div>
+                <div class="w-64 text-center">medium</div>
+                <div class="w-64 text-center">large</div>
+              </div>
+              <div class="flex w-full justify-center mt-2">
+                <div class="w-64 text-center">
+                  <cross-button onClick={this.onClick} size="small" pill>
+                    my button
+                  </cross-button>
+                </div>
+                <div class="w-64 text-center">
+                  <cross-button onClick={this.onClick} pill>
+                    my button
+                  </cross-button>
+                </div>
+                <div class="w-64 text-center">
+                  <cross-button onClick={this.onClick} size="large" pill>
+                    my button
+                  </cross-button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 

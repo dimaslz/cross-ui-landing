@@ -5,7 +5,7 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { MatchResults } from "@stencil/router";
+import { MatchResults, RouterHistory } from "@stencil/router";
 export namespace Components {
     interface App404 {
     }
@@ -18,6 +18,7 @@ export namespace Components {
     interface AppGettingStarted {
     }
     interface AppHome {
+        "history": RouterHistory;
     }
     interface AppInstallation {
     }
@@ -31,6 +32,8 @@ export namespace Components {
     interface AppRoot {
     }
     interface AppSupport {
+    }
+    interface AppWelcome {
     }
     interface AppWhy {
     }
@@ -110,6 +113,12 @@ declare global {
         prototype: HTMLAppSupportElement;
         new (): HTMLAppSupportElement;
     };
+    interface HTMLAppWelcomeElement extends Components.AppWelcome, HTMLStencilElement {
+    }
+    var HTMLAppWelcomeElement: {
+        prototype: HTMLAppWelcomeElement;
+        new (): HTMLAppWelcomeElement;
+    };
     interface HTMLAppWhyElement extends Components.AppWhy, HTMLStencilElement {
     }
     var HTMLAppWhyElement: {
@@ -135,6 +144,7 @@ declare global {
         "app-profile": HTMLAppProfileElement;
         "app-root": HTMLAppRootElement;
         "app-support": HTMLAppSupportElement;
+        "app-welcome": HTMLAppWelcomeElement;
         "app-why": HTMLAppWhyElement;
         "components-button": HTMLComponentsButtonElement;
     }
@@ -151,6 +161,7 @@ declare namespace LocalJSX {
     interface AppGettingStarted {
     }
     interface AppHome {
+        "history"?: RouterHistory;
     }
     interface AppInstallation {
     }
@@ -164,6 +175,8 @@ declare namespace LocalJSX {
     interface AppRoot {
     }
     interface AppSupport {
+    }
+    interface AppWelcome {
     }
     interface AppWhy {
     }
@@ -182,6 +195,7 @@ declare namespace LocalJSX {
         "app-profile": AppProfile;
         "app-root": AppRoot;
         "app-support": AppSupport;
+        "app-welcome": AppWelcome;
         "app-why": AppWhy;
         "components-button": ComponentsButton;
     }
@@ -202,6 +216,7 @@ declare module "@stencil/core" {
             "app-profile": LocalJSX.AppProfile & JSXBase.HTMLAttributes<HTMLAppProfileElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
             "app-support": LocalJSX.AppSupport & JSXBase.HTMLAttributes<HTMLAppSupportElement>;
+            "app-welcome": LocalJSX.AppWelcome & JSXBase.HTMLAttributes<HTMLAppWelcomeElement>;
             "app-why": LocalJSX.AppWhy & JSXBase.HTMLAttributes<HTMLAppWhyElement>;
             "components-button": LocalJSX.ComponentsButton & JSXBase.HTMLAttributes<HTMLComponentsButtonElement>;
         }

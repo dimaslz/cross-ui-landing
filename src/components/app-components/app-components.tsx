@@ -9,7 +9,7 @@ export class AppComponents {
   render() {
     return (
       <div class="Components flex p-4">
-        <app-menu class="w-64" />
+        <app-menu class="w-64 pt-10" />
 
         <div class="Components__content w-full">
           <stencil-router>
