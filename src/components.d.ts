@@ -7,6 +7,8 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { MatchResults } from "@stencil/router";
 export namespace Components {
+    interface App404 {
+    }
     interface AppComponents {
     }
     interface AppContribution {
@@ -36,6 +38,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLApp404Element extends Components.App404, HTMLStencilElement {
+    }
+    var HTMLApp404Element: {
+        prototype: HTMLApp404Element;
+        new (): HTMLApp404Element;
+    };
     interface HTMLAppComponentsElement extends Components.AppComponents, HTMLStencilElement {
     }
     var HTMLAppComponentsElement: {
@@ -115,6 +123,7 @@ declare global {
         new (): HTMLComponentsButtonElement;
     };
     interface HTMLElementTagNameMap {
+        "app-404": HTMLApp404Element;
         "app-components": HTMLAppComponentsElement;
         "app-contribution": HTMLAppContributionElement;
         "app-design-system": HTMLAppDesignSystemElement;
@@ -131,6 +140,8 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface App404 {
+    }
     interface AppComponents {
     }
     interface AppContribution {
@@ -159,6 +170,7 @@ declare namespace LocalJSX {
     interface ComponentsButton {
     }
     interface IntrinsicElements {
+        "app-404": App404;
         "app-components": AppComponents;
         "app-contribution": AppContribution;
         "app-design-system": AppDesignSystem;
@@ -178,6 +190,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "app-404": LocalJSX.App404 & JSXBase.HTMLAttributes<HTMLApp404Element>;
             "app-components": LocalJSX.AppComponents & JSXBase.HTMLAttributes<HTMLAppComponentsElement>;
             "app-contribution": LocalJSX.AppContribution & JSXBase.HTMLAttributes<HTMLAppContributionElement>;
             "app-design-system": LocalJSX.AppDesignSystem & JSXBase.HTMLAttributes<HTMLAppDesignSystemElement>;

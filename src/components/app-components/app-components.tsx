@@ -8,7 +8,7 @@ import { Component, h } from '@stencil/core';
 export class AppComponents {
   render() {
     return (
-      <div class="Components flex">
+      <div class="Components flex p-4">
         <app-menu class="w-64" />
 
         <div class="Components__content w-full">

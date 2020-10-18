@@ -1,6 +1,6 @@
 # CrossUI landing
 
-**[WIP]** Landing page for Cross UI components ([https://github.com/dimaslz/cross-ui-core](https://github.com/dimaslz/cross-ui-core)).
+[WIP] Landing page for Cross UI components ([https://github.com/dimaslz/cross-ui-core](https://github.com/dimaslz/cross-ui-core)).
 
 ## Author
 

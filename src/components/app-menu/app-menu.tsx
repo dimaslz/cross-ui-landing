@@ -11,7 +11,7 @@ export class AppMenu {
       <div class="Menu w-full">
         <div class="flex items-start justify-start h-full flex-col">
           <ul>
-            <li>
+            {/* <li>
               <h3>Getting started</h3>
             </li>
             <li>
@@ -32,10 +32,10 @@ export class AppMenu {
                   <stencil-route-link url="/getting-started/design-system">Design system</stencil-route-link>
                 </li>
               </ul>
-            </li>
+            </li> */}
             <li>Components</li>
             <li>
-              <ul>
+              <ul class="py-2">
                 <ul class="pl-3 text-sm mb-4">
                   <li>
                     <stencil-route-link url="/components/button" class="hover:text-green-500">
