@@ -1,5 +1,5 @@
 {
-  "name": "@cross-ui/landing-app",
+  "name": "@cross-ui/landing",
   "private": true,
   "version": "0.0.1",
   "description": "CrossUI landing page",
@@ -18,10 +18,10 @@
     "@stencil/postcss": "^1.0.1",
     "@stencil/router": "^1.0.1",
     "@stencil/sass": "^1.3.2",
-    "@types/node": "^14.11.8",
+    "@types/node": "^14.11.10",
     "autoprefixer": "^9.8.6",
     "cssnano": "^4.1.10",
-    "tailwindcss": "^1.9.2"
+    "tailwindcss": "^1.9.4"
   },
   "license": "MIT",
   "dependencies": {
